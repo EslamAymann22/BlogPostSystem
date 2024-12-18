@@ -1,4 +1,7 @@
 
+using BlogSystem.Repository.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace BlogSystem.APIs
 {
     public class Program
@@ -12,6 +15,10 @@ namespace BlogSystem.APIs
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            builder.Services.AddDbContext<BlogPostDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            }); 
             #endregion
 
             #region Configure - the HTTP Request pipeline 

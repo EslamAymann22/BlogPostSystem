@@ -1,0 +1,12 @@
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\bin\Debug\net9.0\BlogSystem.Service.deps.json
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\bin\Debug\net9.0\BlogSystem.Service.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\bin\Debug\net9.0\BlogSystem.Service.pdb
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.AssemblyInfoInputs.cache
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.AssemblyInfo.cs
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.csproj.CoreCompileInputs.cache
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.sourcelink.json
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\refint\BlogSystem.Service.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.pdb
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\ref\BlogSystem.Service.dll

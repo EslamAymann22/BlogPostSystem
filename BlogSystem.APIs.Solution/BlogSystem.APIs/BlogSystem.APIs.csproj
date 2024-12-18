@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24452.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlogSystem.Repository\BlogSystem.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
