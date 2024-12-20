@@ -12,14 +12,14 @@ namespace BlogSystem.Core.Entities
         public int Id { get; set; }
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
-        [ForeignKey("PostId")]
+        //[ForeignKey("Post")]
         public int PostId { get; set; }
         public BlogPost Post { get; set; }
 
 
-        [ForeignKey("Author")]
+        //[ForeignKey("Author")]
         public int AuthorId { get; set; }
-        User Author { get; set; }
+        public User Author { get; set; }
 
     }
 }

@@ -13,14 +13,21 @@ namespace BlogSystem.Repository.Data.Config
     {
         public void Configure(EntityTypeBuilder<BlogPost> builder)
         {
+
+            builder.HasOne(P => P.Author)
+                .WithMany()
+                .HasForeignKey(P => P.AuthorId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(P => P.Category)
+                .WithMany()
+                .HasForeignKey(P => P.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
             builder.HasMany(P => P.Tags)
                 .WithMany();
 
-            builder
-            .HasOne(P => P.category)
-                .WithMany()
-                .HasForeignKey(P => P.CategoryId)
-                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasKey(P=>P.Id);
 

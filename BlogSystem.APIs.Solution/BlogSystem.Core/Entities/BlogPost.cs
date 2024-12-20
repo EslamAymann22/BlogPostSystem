@@ -24,10 +24,10 @@ namespace BlogSystem.Core.Entities
         DateTime UpdatedAt { get; set; }
         public PostStatus Status { get; set; } = PostStatus.Published;
 
-        public List<Tag>Tags { get; set; }
+        public List<Tag>Tags { get; set; } = new List<Tag>();
 
-        //[ForeignKey("category")]
-        public int? CategoryId { get; set; }
-        public Category? category { get; set; }
+        [ForeignKey("category")]
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }

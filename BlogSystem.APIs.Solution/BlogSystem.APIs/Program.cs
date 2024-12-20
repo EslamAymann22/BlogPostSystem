@@ -33,6 +33,9 @@ namespace BlogSystem.APIs
             {
                 var DbContext = Services.GetRequiredService<BlogPostDbContext>();
                 await DbContext.Database.MigrateAsync();
+
+                await BlogPostDataSeedingContext.AddAsync(DbContext);
+
             }
             catch (Exception ex) { 
 
