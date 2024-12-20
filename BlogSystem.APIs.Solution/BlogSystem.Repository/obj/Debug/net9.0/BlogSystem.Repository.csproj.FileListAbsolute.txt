@@ -11,3 +11,6 @@ C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Repository\
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Repository\obj\Debug\net9.0\refint\BlogSystem.Repository.dll
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Repository\obj\Debug\net9.0\BlogSystem.Repository.pdb
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Repository\obj\Debug\net9.0\ref\BlogSystem.Repository.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Repository\bin\Debug\net9.0\BlogSystem.Core.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Repository\bin\Debug\net9.0\BlogSystem.Core.pdb
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Repository\obj\Debug\net9.0\BlogSyst.4795F488.Up2Date

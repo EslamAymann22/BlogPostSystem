@@ -14,4 +14,8 @@
     <ProjectReference Include="..\BlogSystem.Core\BlogSystem.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\DataSeed\" />
+  </ItemGroup>
+
 </Project>

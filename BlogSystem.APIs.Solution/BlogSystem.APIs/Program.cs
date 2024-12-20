@@ -6,7 +6,7 @@ namespace BlogSystem.APIs
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             #region Configure Service 
             // Add services to the container.
@@ -18,12 +18,33 @@ namespace BlogSystem.APIs
             builder.Services.AddDbContext<BlogPostDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            }); 
+            });
+            #endregion
+         
+            var app = builder.Build();
+
+            #region Update DataBase
+
+            using var Scope = app.Services.CreateScope();
+            var Services = Scope.ServiceProvider;
+            var LoggerFactory = Services.GetRequiredService<ILoggerFactory>();
+
+            try
+            {
+                var DbContext = Services.GetRequiredService<BlogPostDbContext>();
+                await DbContext.Database.MigrateAsync();
+            }
+            catch (Exception ex) { 
+
+                var Logger = LoggerFactory.CreateLogger<Program>();
+                Logger.LogError(ex, "Error During Update database in ");
+
+            }
+
             #endregion
 
-            #region Configure - the HTTP Request pipeline 
 
-            var app = builder.Build();
+            #region Configure - the HTTP Request pipeline 
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -39,7 +60,6 @@ namespace BlogSystem.APIs
             app.MapControllers();
 
             #endregion
-
 
             app.Run();
         }

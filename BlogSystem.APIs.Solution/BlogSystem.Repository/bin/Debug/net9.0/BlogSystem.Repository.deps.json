@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "BlogSystem.Repository/1.0.0": {
         "dependencies": {
+          "BlogSystem.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
         },
         "runtime": {
@@ -572,6 +573,14 @@
             "fileVersion": "6.0.21.52210"
           }
         }
+      },
+      "BlogSystem.Core/1.0.0": {
+        "runtime": {
+          "BlogSystem.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -965,6 +974,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "BlogSystem.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.repository\\data\\blogpostdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|solutionrelative:blogsystem.repository\\data\\blogpostdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.apis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|solutionrelative:blogsystem.apis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|solutionrelative:blogsystem.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.repository\\data\\blogpostdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|solutionrelative:blogsystem.repository\\data\\blogpostdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA07F90B-58CA-4BC8-9934-9C8DF5396CC5}|BlogSystem.Core\\BlogSystem.Core.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.core\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\appsettings.json",
+              "RelativeDocumentMoniker": "BlogSystem.APIs\\appsettings.json",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\appsettings.json",
+              "RelativeToolTip": "BlogSystem.APIs\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T07:50:46.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,40 +61,40 @@
               "RelativeDocumentMoniker": "BlogSystem.APIs\\Program.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Program.cs",
               "RelativeToolTip": "BlogSystem.APIs\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCcAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T17:35:04.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BlogPostDbContext.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\Data\\BlogPostDbContext.cs",
               "RelativeDocumentMoniker": "BlogSystem.Repository\\Data\\BlogPostDbContext.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\Data\\BlogPostDbContext.cs",
               "RelativeToolTip": "BlogSystem.Repository\\Data\\BlogPostDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T17:28:21.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Comment.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Entities\\Comment.cs",
               "RelativeDocumentMoniker": "BlogSystem.Core\\Entities\\Comment.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Entities\\Comment.cs",
               "RelativeToolTip": "BlogSystem.Core\\Entities\\Comment.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA0AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T15:35:05.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Entities\\UserRole.cs",
               "RelativeDocumentMoniker": "BlogSystem.Core\\Entities\\UserRole.cs",
@@ -90,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Entities\\User.cs",
               "RelativeDocumentMoniker": "BlogSystem.Core\\Entities\\User.cs",

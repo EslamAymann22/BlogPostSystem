@@ -17,9 +17,10 @@ namespace BlogSystem.Repository.Data.Config
                 .WithOne()
                 .OnDelete(DeleteBehavior.SetNull);
 
-            builder.HasOne(P => P.category)
-                .WithOne()
-                .HasForeignKey("CategoryId")
+            builder
+            .HasOne(P => P.category)
+                .WithMany()
+                .HasForeignKey(P => P.CategoryId)
                 .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasKey(P=>P.Id);

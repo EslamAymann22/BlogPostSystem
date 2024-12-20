@@ -26,8 +26,8 @@ namespace BlogSystem.Core.Entities
 
         public List<Tag>Tags { get; set; }
 
-        [ForeignKey("category")]
-        public int CategoryId {  get; set; }
-        public Category category { get; set; }
+        //[ForeignKey("category")]
+        public int? CategoryId { get; set; }
+        public Category? category { get; set; }
     }
 }
