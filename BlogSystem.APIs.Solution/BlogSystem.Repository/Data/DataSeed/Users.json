@@ -1,0 +1,33 @@
+﻿[
+	{
+		"UserName": "EslamAyman",
+		"HashPassword": 123,
+		"Email": "EslamAyman@gmail.com",
+		"Role": "Admin"
+	},
+	{
+		"UserName": "MohamedAli",
+		"HashPassword": 123,
+		"Email": "MohamedAli@gmail.com",
+		"Role": "Reader"
+	},
+	{
+		"UserName": "JooAyman",
+		"HashPassword": 123,
+		"Email": "JooAyman@gmail.com",
+		"Role": "Editor"
+	},
+	{
+		"UserName": "MonaRamy",
+		"HashPassword": 123,
+		"Email": "MonaRamy@gmail.com",
+		"Role": "Reader"
+	},
+	{
+		"UserName": "HashemAhmed",
+		"HashPassword": 123,
+		"Email": "HashemAhmed@gmail.com",
+		"Role": "Reader"
+	}
+
+]

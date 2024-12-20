@@ -14,8 +14,7 @@ namespace BlogSystem.Repository.Data.Config
         public void Configure(EntityTypeBuilder<BlogPost> builder)
         {
             builder.HasMany(P => P.Tags)
-                .WithOne()
-                .OnDelete(DeleteBehavior.SetNull);
+                .WithMany();
 
             builder
             .HasOne(P => P.category)

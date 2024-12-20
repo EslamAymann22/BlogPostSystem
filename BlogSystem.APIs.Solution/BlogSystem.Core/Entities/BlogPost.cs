@@ -22,7 +22,7 @@ namespace BlogSystem.Core.Entities
         public User Author { get; set; }
         DateTime CreatedAt { get; set; } = DateTime.Now;
         DateTime UpdatedAt { get; set; }
-        public PostStatus Status { get; set; }
+        public PostStatus Status { get; set; } = PostStatus.Published;
 
         public List<Tag>Tags { get; set; }
 
