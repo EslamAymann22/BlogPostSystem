@@ -1,7 +1,9 @@
 ﻿using BlogSystem.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -64,6 +66,21 @@ namespace BlogSystem.Repository.Data
                 {
                     foreach (var Post in Posts)
                     {
+                        var TagsId = Post.Tags.Select(T => T.Id).ToList();
+
+                        var PostTags = await MyDbContext.Set<Tag>()
+                            .Where(T => TagsId.Contains(T.Id))
+                            .ToListAsync();
+
+                        //var PostTags = new List<Tag>();
+                        //foreach (var Tag in TagsId)
+                        //{
+                        //    var tag = await MyDbContext.tags.Where(T => T.Id == Tag).FirstOrDefaultAsync();
+                        //    if (tag is not null)
+                        //        PostTags.Add(tag);
+                        //}
+
+                        Post.Tags = PostTags;
                         await MyDbContext.Set<BlogPost>().AddAsync(Post);
                     }
                     await MyDbContext.SaveChangesAsync();

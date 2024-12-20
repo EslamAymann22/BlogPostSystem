@@ -26,6 +26,7 @@ namespace BlogSystem.Repository.Data.Config
 
 
             builder.HasMany(P => P.Tags)
+                //.WithMany(T=>T.Posts);
                 .WithMany();
 
 

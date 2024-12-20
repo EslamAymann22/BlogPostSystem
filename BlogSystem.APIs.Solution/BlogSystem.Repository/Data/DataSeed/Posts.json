@@ -4,8 +4,12 @@
     "Content": "ContentOfPost1WhyDon'tUseGetLine!!!!,",
     "AuthorId": 2,
     "Tags": [
-      { "id": 2 },
-      { "id": 4 }
+      {
+        "Id": 2
+      },
+      {
+        "Id": 4
+      }
     ],
     "CategoryId": 2
   },
@@ -14,8 +18,12 @@
     "Content": "ContentOfPost2WhyDon'tUseGetLine!!!!,",
     "AuthorId": 1,
     "Tags": [
-      { "id": 1 },
-      { "id": 3 }
+      {
+        "Id": 1
+      },
+      {
+        "Id": 3
+      }
     ],
     "CategoryId": 5
   },
@@ -24,8 +32,12 @@
     "Content": "ContentOfPost3WhyDon'tUseGetLine!!!!,",
     "AuthorId": 5,
     "Tags": [
-      { "id": 4 },
-      { "id": 5 }
+      {
+        "Id": 4
+      },
+      {
+        "Id": 5
+      }
     ],
     "CategoryId": 1
   },
@@ -34,8 +46,12 @@
     "Content": "ContentOfPost4WhyDon'tUseGetLine!!!!,",
     "AuthorId": 2,
     "Tags": [
-      { "id": 1 },
-      { "id": 4 }
+      {
+        "Id": 1
+      },
+      {
+        "Id": 4
+      }
     ],
     "CategoryId": 2
   },
@@ -44,8 +60,12 @@
     "Content": "ContentOfPost5WhyDon'tUseGetLine!!!!,",
     "AuthorId": 3,
     "Tags": [
-      { "id": 2 },
-      { "id": 1 }
+      {
+        "Id": 2
+      },
+      {
+        "Id": 1
+      }
     ],
     "CategoryId": 3
   }
