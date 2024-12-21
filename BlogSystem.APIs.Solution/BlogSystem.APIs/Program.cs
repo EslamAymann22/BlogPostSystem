@@ -1,4 +1,6 @@
 
+using BlogSystem.Core.Repositories;
+using BlogSystem.Repository;
 using BlogSystem.Repository.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +22,13 @@ namespace BlogSystem.APIs
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
             #endregion
-         
+
+            #region AskedCLR.ToInjectOpject
+
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            #endregion
+
             var app = builder.Build();
 
             #region Update DataBase
@@ -37,10 +45,10 @@ namespace BlogSystem.APIs
                 await BlogPostDataSeedingContext.AddAsync(DbContext);
 
             }
-            catch (Exception ex) { 
+            catch (Exception ex) {
 
                 var Logger = LoggerFactory.CreateLogger<Program>();
-                Logger.LogError(ex, "Error During Update database in ");
+                Logger.LogError(ex, "Error During Update database in Program\n");
 
             }
 

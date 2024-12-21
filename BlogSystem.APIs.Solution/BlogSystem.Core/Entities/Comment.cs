@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Core.Entities
 {
-    public class Comment
+    public class Comment : BaseClassWithId
     {
-        public int Id { get; set; }
+        
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
         //[ForeignKey("Post")]

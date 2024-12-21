@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Core.Entities
 {
-    public class Tag
+    public class Tag : BaseClassWithId
     {
-        public int Id { get; set; }
+      
         public string Name { get; set; }
         //public List<BlogPost> Posts { get; set; }
 

@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Core.Entities
 {
-    public class User
+    public class User : BaseClassWithId
     {
-        [Key]
-        public int Id { get; set; }
+       
         [Required]
         public string UserName { get; set; }
         public string HashPassword { get; set; }

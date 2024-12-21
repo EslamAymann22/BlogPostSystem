@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.apis\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|solutionrelative:blogsystem.apis\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA07F90B-58CA-4BC8-9934-9C8DF5396CC5}|BlogSystem.Core\\BlogSystem.Core.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.core\\specifications\\basespecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA07F90B-58CA-4BC8-9934-9C8DF5396CC5}|BlogSystem.Core\\BlogSystem.Core.csproj|solutionrelative:blogsystem.core\\specifications\\basespecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA07F90B-58CA-4BC8-9934-9C8DF5396CC5}|BlogSystem.Core\\BlogSystem.Core.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.core\\specifications\\postspecificationwithallincludes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA07F90B-58CA-4BC8-9934-9C8DF5396CC5}|BlogSystem.Core\\BlogSystem.Core.csproj|solutionrelative:blogsystem.core\\specifications\\postspecificationwithallincludes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|solutionrelative:blogsystem.repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.repository\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBF78DF6-84EC-4936-8DFD-8E06CD01E3A6}|BlogSystem.Repository\\BlogSystem.Repository.csproj|solutionrelative:blogsystem.repository\\specificationevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +30,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "BlogSystem.APIs\\Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Controllers\\PostController.cs",
+              "RelativeToolTip": "BlogSystem.APIs\\Controllers\\PostController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAB8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T22:10:46.713Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "BlogSystem.Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\GenericRepository.cs",
+              "RelativeToolTip": "BlogSystem.Repository\\GenericRepository.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T22:40:48.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpecificationEvaluator.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\SpecificationEvaluator.cs",
+              "RelativeDocumentMoniker": "BlogSystem.Repository\\SpecificationEvaluator.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\SpecificationEvaluator.cs",
+              "RelativeToolTip": "BlogSystem.Repository\\SpecificationEvaluator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T22:40:40.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseSpecifications.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Specifications\\BaseSpecifications.cs",
+              "RelativeDocumentMoniker": "BlogSystem.Core\\Specifications\\BaseSpecifications.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Specifications\\BaseSpecifications.cs",
+              "RelativeToolTip": "BlogSystem.Core\\Specifications\\BaseSpecifications.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T22:40:31.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostSpecificationWithAllIncludes.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Specifications\\PostSpecificationWithAllIncludes.cs",
+              "RelativeDocumentMoniker": "BlogSystem.Core\\Specifications\\PostSpecificationWithAllIncludes.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Specifications\\PostSpecificationWithAllIncludes.cs",
+              "RelativeToolTip": "BlogSystem.Core\\Specifications\\PostSpecificationWithAllIncludes.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAhwAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T22:25:56.992Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"

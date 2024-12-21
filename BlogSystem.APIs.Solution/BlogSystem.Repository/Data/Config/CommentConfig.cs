@@ -16,6 +16,8 @@ namespace BlogSystem.Repository.Data.Config
             builder.HasOne(C => C.Author)
                 .WithMany()
                 .OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(C => C.Post)
+                .WithMany();
         }
     }
 }

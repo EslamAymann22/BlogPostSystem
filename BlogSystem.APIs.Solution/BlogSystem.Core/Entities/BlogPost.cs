@@ -9,11 +9,8 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Core.Entities
 {
-    public class BlogPost
+    public class BlogPost : BaseClassWithId
     {
-
-
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
 
