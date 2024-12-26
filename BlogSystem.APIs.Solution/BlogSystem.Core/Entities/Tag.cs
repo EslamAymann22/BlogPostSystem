@@ -10,7 +10,7 @@ namespace BlogSystem.Core.Entities
     {
       
         public string Name { get; set; }
-        //public List<BlogPost> Posts { get; set; }
+        //public List<Post> Posts { get; set; }
 
     }
 }

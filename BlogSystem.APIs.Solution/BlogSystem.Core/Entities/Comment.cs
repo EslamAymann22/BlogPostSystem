@@ -14,7 +14,7 @@ namespace BlogSystem.Core.Entities
         public DateTime CreatedAt { get; set; }
         //[ForeignKey("Post")]
         public int PostId { get; set; }
-        public BlogPost Post { get; set; }
+        public Post Post { get; set; }
 
 
         //[ForeignKey("Author")]

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Core.Entities
 {
-    public class BlogPost : BaseClassWithId
+    public class Post : BaseClassWithId
     {
         public string Title { get; set; }
         public string Content { get; set; }

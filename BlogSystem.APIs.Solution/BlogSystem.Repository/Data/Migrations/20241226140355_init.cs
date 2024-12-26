@@ -82,30 +82,6 @@ namespace BlogSystem.Repository.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BlogPostTag",
-                columns: table => new
-                {
-                    BlogPostId = table.Column<int>(type: "int", nullable: false),
-                    TagsId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BlogPostTag", x => new { x.BlogPostId, x.TagsId });
-                    table.ForeignKey(
-                        name: "FK_BlogPostTag_blogPosts_BlogPostId",
-                        column: x => x.BlogPostId,
-                        principalTable: "blogPosts",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BlogPostTag_tags_TagsId",
-                        column: x => x.TagsId,
-                        principalTable: "tags",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "comments",
                 columns: table => new
                 {
@@ -132,6 +108,30 @@ namespace BlogSystem.Repository.Data.Migrations
                         principalColumn: "Id");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "PostTag",
+                columns: table => new
+                {
+                    PostId = table.Column<int>(type: "int", nullable: false),
+                    TagsId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PostTag", x => new { x.PostId, x.TagsId });
+                    table.ForeignKey(
+                        name: "FK_PostTag_blogPosts_PostId",
+                        column: x => x.PostId,
+                        principalTable: "blogPosts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PostTag_tags_TagsId",
+                        column: x => x.TagsId,
+                        principalTable: "tags",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_blogPosts_AuthorId",
                 table: "blogPosts",
@@ -143,11 +143,6 @@ namespace BlogSystem.Repository.Data.Migrations
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BlogPostTag_TagsId",
-                table: "BlogPostTag",
-                column: "TagsId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_comments_AuthorId",
                 table: "comments",
                 column: "AuthorId");
@@ -156,22 +151,27 @@ namespace BlogSystem.Repository.Data.Migrations
                 name: "IX_comments_PostId",
                 table: "comments",
                 column: "PostId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PostTag_TagsId",
+                table: "PostTag",
+                column: "TagsId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "BlogPostTag");
-
-            migrationBuilder.DropTable(
                 name: "comments");
 
             migrationBuilder.DropTable(
-                name: "tags");
+                name: "PostTag");
 
             migrationBuilder.DropTable(
                 name: "blogPosts");
+
+            migrationBuilder.DropTable(
+                name: "tags");
 
             migrationBuilder.DropTable(
                 name: "categories");

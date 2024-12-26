@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[BlogSystem.Core.Entities.BlogPost, BlogSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[BlogSystem.Core.Entities.Post, BlogSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BlogSystem.Core.Entities.BlogPost",
+        "Type": "BlogSystem.Core.Entities.Post",
         "MediaTypes": [
           "text/plain",
           "application/json",

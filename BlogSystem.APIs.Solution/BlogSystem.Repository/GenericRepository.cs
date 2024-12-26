@@ -45,9 +45,9 @@ namespace BlogSystem.Repository
 
         ///public async Task<IEnumerable<T>> GetAllAsync()
         ///{
-        ///    if (typeof(T) == typeof(BlogPost))
+        ///    if (typeof(T) == typeof(Post))
         ///    {
-        ///        return  await _dbContext.Set<BlogPost>()
+        ///        return  await _dbContext.Set<Post>()
         ///            .Include(U => U.Category)
         ///            .Include(U => U.Tags)
         ///            .Include(U => U.Author)

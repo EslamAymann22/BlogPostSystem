@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Repository.Data.Config
 {
-    public class BlogPostConfig : IEntityTypeConfiguration<BlogPost>
+    public class BlogPostConfig : IEntityTypeConfiguration<Post>
     {
-        public void Configure(EntityTypeBuilder<BlogPost> builder)
+        public void Configure(EntityTypeBuilder<Post> builder)
         {
 
             builder.HasOne(P => P.Author)

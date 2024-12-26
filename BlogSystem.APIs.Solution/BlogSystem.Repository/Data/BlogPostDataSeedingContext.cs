@@ -61,7 +61,7 @@ namespace BlogSystem.Repository.Data
             if (!MyDbContext.blogPosts.Any())
             {
                 var PostsData = File.ReadAllText("../BlogSystem.Repository/Data/DataSeed/Posts.json");
-                var Posts = JsonSerializer.Deserialize<List<BlogPost>>(PostsData);
+                var Posts = JsonSerializer.Deserialize<List<Post>>(PostsData);
                 if (Posts?.Count() > 0)
                 {
                     foreach (var Post in Posts)
@@ -81,7 +81,7 @@ namespace BlogSystem.Repository.Data
                         //}
 
                         Post.Tags = PostTags;
-                        await MyDbContext.Set<BlogPost>().AddAsync(Post);
+                        await MyDbContext.Set<Post>().AddAsync(Post);
                     }
                     await MyDbContext.SaveChangesAsync();
                 }

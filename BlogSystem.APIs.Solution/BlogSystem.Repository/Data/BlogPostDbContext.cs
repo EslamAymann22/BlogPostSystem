@@ -26,7 +26,7 @@ namespace BlogSystem.Repository.Data
 
         public DbSet<User> users { get; set; }
         public DbSet<Comment>comments { get; set; }
-        public DbSet<BlogPost>blogPosts { get; set; }
+        public DbSet<Post>blogPosts { get; set; }
         public DbSet<Tag>tags { get; set; }
         public DbSet<Category> categories{ get; set; }
         

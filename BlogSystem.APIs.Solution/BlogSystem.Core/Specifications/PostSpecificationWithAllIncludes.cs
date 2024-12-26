@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Core.Specifications
 {
-    public class PostSpecificationWithAllIncludes : BaseSpecifications<BlogPost>
+    public class PostSpecificationWithAllIncludes : BaseSpecifications<Post>
     {
 
         public PostSpecificationWithAllIncludes() : base()

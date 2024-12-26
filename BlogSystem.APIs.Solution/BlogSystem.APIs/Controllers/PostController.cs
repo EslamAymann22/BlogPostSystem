@@ -9,15 +9,15 @@ namespace BlogSystem.APIs.Controllers
     
     public class PostController : ApiBaseController
     {
-        private readonly IGenericRepository<BlogPost> _blogPosts;
+        private readonly IGenericRepository<Post> _blogPosts;
 
-        public PostController(IGenericRepository<BlogPost> blogPosts)
+        public PostController(IGenericRepository<Post> blogPosts)
         {
             _blogPosts = blogPosts;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<BlogPost>>> GetAllPostsAsync()
+        public async Task<ActionResult<List<Post>>> GetAllPostsAsync()
         {
             var Spec = new PostSpecificationWithAllIncludes();
 
@@ -27,7 +27,8 @@ namespace BlogSystem.APIs.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<BlogPost>> GetPostByIdAsync(int id)
+        // BaseUrl/Api/post/id(int)
+        public async Task<ActionResult<Post>> GetPostByIdAsync(int id)
         {
             var Spec = new PostSpecificationWithAllIncludes(id);
             //var Result =await _blogPosts.GetByIdAsync(id);
