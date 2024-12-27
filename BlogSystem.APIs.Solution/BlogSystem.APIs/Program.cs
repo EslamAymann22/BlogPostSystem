@@ -1,7 +1,12 @@
 
+using BlogSystem.APIs.Errors;
+using BlogSystem.APIs.Extensions;
+using BlogSystem.APIs.Helper;
+using BlogSystem.APIs.Middlewares;
 using BlogSystem.Core.Repositories;
 using BlogSystem.Repository;
 using BlogSystem.Repository.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogSystem.APIs
@@ -23,11 +28,11 @@ namespace BlogSystem.APIs
             });
             #endregion
 
-            #region AskedCLR.ToInjectOpject
+            //ApplicationServicesExtensions.AddApplicationServices(builder.Services); // this is wrong 
 
-            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddApplicationServices();
 
-            #endregion
+            
 
             var app = builder.Build();
 
@@ -60,8 +65,13 @@ namespace BlogSystem.APIs
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                app.UseMiddleware<ExceptionMiddleWare>();
                 app.MapOpenApi();
             }
+
+            // Zero is a index not value 
+            //app.UseStatusCodePagesWithRedirects("/errors/{0}");
+            app.UseStatusCodePagesWithReExecute("/errors/{0}"); // Faster than Redirects
 
             app.UseHttpsRedirection();
 

@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[BlogSystem.Core.Entities.Post, BlogSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[BlogSystem.APIs.DTOs.PostDtoToReturn, BlogSystem.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BlogSystem.Core.Entities.Post",
+        "Type": "BlogSystem.APIs.DTOs.PostDtoToReturn",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -44,6 +44,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BlogSystem.APIs.Controllers.ErrorsController",
+    "Method": "Error",
+    "RelativePath": "errors/{code}",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BlogSystem.APIs.Controllers.WeatherForecastController",

@@ -166,3 +166,5 @@ C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\De
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\BlogSystem.Core.dll
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\BlogSystem.Core.pdb
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

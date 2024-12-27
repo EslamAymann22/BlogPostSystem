@@ -17,8 +17,8 @@ namespace BlogSystem.Core.Entities
         [ForeignKey("Author")]
         public int AuthorId { get; set; }
         public User Author { get; set; }
-        DateTime CreatedAt { get; set; } = DateTime.Now;
-        DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; }
         public PostStatus Status { get; set; } = PostStatus.Published;
 
         public List<Tag>Tags { get; set; } = new List<Tag>();
