@@ -10,7 +10,7 @@ namespace BlogSystem.Core.Specifications
 {
     public static class SpecificationsEvaluator<T> where T : BaseClassWithId
     {
-
+        
         public static IQueryable<T> GetQuery(IQueryable<T> inputQ, ISpecifications<T> spec)
         {
 
@@ -18,6 +18,13 @@ namespace BlogSystem.Core.Specifications
 
             if (spec.Criteria is not null)
                 Query = Query.Where(spec.Criteria);
+
+            if(spec.OrderBy is not null)
+                Query = Query.OrderBy(spec.OrderBy);
+
+            if (spec.OrderByDesc is not null)
+                Query = Query.OrderByDescending(spec.OrderByDesc);
+
 
             Query = spec.Includes.Aggregate(Query, (A, B) => A.Include(B));
 

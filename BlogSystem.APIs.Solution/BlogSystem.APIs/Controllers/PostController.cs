@@ -22,10 +22,10 @@ namespace BlogSystem.APIs.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<PostDtoToReturn>>> GetAllPostsAsync()
+        public async Task<ActionResult<List<PostDtoToReturn>>> GetAllPostsAsync([FromQuery] PostSpecificationParams Parms )
         {
-            var Spec = new PostSpecificationWithAllIncludes();
-
+            //if(Parms.status == PostStatus.Published) { Parms.status = null; }
+            var Spec = new PostSpecificationWithAllIncludes(Parms);
             var Result = await _blogPosts.GetAllSpecAsync(Spec);
             var ResultDto = _mapper.Map<IEnumerable<Post>, IEnumerable<PostDtoToReturn>>(Result);
             //var Result = await _blogPosts.GetAllAsync();
