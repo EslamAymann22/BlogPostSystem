@@ -11,6 +11,7 @@ namespace BlogSystem.Core.Specifications
     public class PostSpecificationWithAllIncludes : BaseSpecifications<Post>
     {
 
+
         public PostSpecificationWithAllIncludes(PostSpecificationParams Parms = null) : base()
         {
             Includes.Add(P => P.Author);
@@ -18,12 +19,15 @@ namespace BlogSystem.Core.Specifications
             Includes.Add(P => P.Category);
             SearchFiltration(Parms);
             SortFiltration(Parms);
-
-          
-                
+            ApplyPagination(Parms);
 
         }
 
+        private void ApplyPagination(PostSpecificationParams Parms)
+        {
+            skip = (Parms.index - 1) * Parms.pageSize;
+            take = Parms.pageSize;
+        }
 
         private void SearchFiltration(PostSpecificationParams Parms)
         {
@@ -32,7 +36,7 @@ namespace BlogSystem.Core.Specifications
                (P.Title.ToLower().Contains(Parms.Search.ToLower()))
             || (P.Category.Name.ToLower().Contains(Parms.Search.ToLower()))
             || (P.Content.ToLower().Contains(Parms.Search.ToLower()))
-            //||(P.Author.UserName.ToLower().Contains(Parms.Search.ToLower()))
+            //||(P.Author.UserName.ToLower().Contains(Parms.Search.ToLower()))   // not required
             || (P.Tags.Any(T => T.Name.ToLower().Contains(Parms.Search.ToLower()))))
             && (Parms.status == null || Parms.status == P.Status);
         }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BlogSystem.APIs.DTOs;
 using BlogSystem.APIs.Errors;
+using BlogSystem.APIs.Helper;
 using BlogSystem.Core.Entities;
 using BlogSystem.Core.Repositories;
 using BlogSystem.Core.Specifications;
@@ -22,14 +23,16 @@ namespace BlogSystem.APIs.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<PostDtoToReturn>>> GetAllPostsAsync([FromQuery] PostSpecificationParams Parms )
+        //public async Task<ActionResult<List<PostDtoToReturn>>> GetAllPostsAsync([FromQuery] PostSpecificationParams Parms )
+        public async Task<ActionResult<Pagination<PostDtoToReturn>>> GetAllPostsAsync([FromQuery] PostSpecificationParams Parms )
         {
             //if(Parms.status == PostStatus.Published) { Parms.status = null; }
             var Spec = new PostSpecificationWithAllIncludes(Parms);
             var Result = await _blogPosts.GetAllSpecAsync(Spec);
             var ResultDto = _mapper.Map<IEnumerable<Post>, IEnumerable<PostDtoToReturn>>(Result);
             //var Result = await _blogPosts.GetAllAsync();
-            return Ok(ResultDto);
+            //return Ok(ResultDto);
+            return Ok(new Pagination<PostDtoToReturn>(Spec.take, Parms.index, Spec.countOfElements, ResultDto));
         }
 
         [HttpGet("{id}")]

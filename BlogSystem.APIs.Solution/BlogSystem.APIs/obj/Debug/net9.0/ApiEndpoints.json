@@ -21,11 +21,21 @@
         "Name": "status",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "index",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[BlogSystem.APIs.DTOs.PostDtoToReturn, BlogSystem.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "BlogSystem.APIs.Helper.Pagination\u00601[[BlogSystem.APIs.DTOs.PostDtoToReturn, BlogSystem.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

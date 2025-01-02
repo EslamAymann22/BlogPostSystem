@@ -25,6 +25,11 @@ namespace BlogSystem.Core.Specifications
             if (spec.OrderByDesc is not null)
                 Query = Query.OrderByDescending(spec.OrderByDesc);
 
+            spec.countOfElements = Query.Count();
+
+            if(spec.ApplyingPagination)
+                Query = Query.Skip(spec.skip).Take(spec.take);
+
 
             Query = spec.Includes.Aggregate(Query, (A, B) => A.Include(B));
 

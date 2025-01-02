@@ -13,7 +13,6 @@ namespace BlogSystem.APIs.DTOs
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }  
         public string Status { get; set; } 
-
         public List<string> Tags { get; set; } 
         public int CategoryId { get; set; }
         public string Category { get; set; }

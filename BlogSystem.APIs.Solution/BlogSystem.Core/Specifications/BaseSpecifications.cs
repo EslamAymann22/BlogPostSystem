@@ -15,6 +15,10 @@ namespace BlogSystem.Core.Specifications
                     = new List<Expression<Func<T, object>>>();
         public Expression<Func<T, object>> OrderBy { get; set; }
         public Expression<Func<T, object>> OrderByDesc { get; set; }
+        public int take { get; set; }
+        public int skip { get; set; }
+        public bool ApplyingPagination {  get; set; } = true;
+        public int countOfElements {  get; set; }
 
         public BaseSpecifications() { }
         public BaseSpecifications(Expression<Func<T, bool>> _Criteria)
