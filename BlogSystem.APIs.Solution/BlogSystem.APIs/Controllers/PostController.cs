@@ -32,6 +32,7 @@ namespace BlogSystem.APIs.Controllers
             var ResultDto = _mapper.Map<IEnumerable<Post>, IEnumerable<PostDtoToReturn>>(Result);
             //var Result = await _blogPosts.GetAllAsync();
             //return Ok(ResultDto);
+            //return Ok(Result);
             return Ok(new Pagination<PostDtoToReturn>(Spec.take, Parms.index, Spec.countOfElements, ResultDto));
         }
 

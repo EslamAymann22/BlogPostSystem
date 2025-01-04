@@ -3,9 +3,11 @@ using BlogSystem.APIs.Errors;
 using BlogSystem.APIs.Extensions;
 using BlogSystem.APIs.Helper;
 using BlogSystem.APIs.Middlewares;
+using BlogSystem.Core.Entities.Identity;
 using BlogSystem.Core.Repositories;
 using BlogSystem.Repository;
 using BlogSystem.Repository.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,16 +24,28 @@ namespace BlogSystem.APIs
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
-            builder.Services.AddDbContext<BlogPostDbContext>(options =>
+
+            
+
+            //builder.Services.AddDbContext<BlogPostDbContext>(options =>
+            //{
+            //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            //});
+            builder.Services.AddDbContext<DbContextIdentity>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-            #endregion
+
+            builder.Services.AddIdentityServices();
+
 
             //ApplicationServicesExtensions.AddApplicationServices(builder.Services); // this is wrong 
 
             builder.Services.AddApplicationServices();
 
+
+
+            #endregion
             
 
             var app = builder.Build();
@@ -44,10 +58,14 @@ namespace BlogSystem.APIs
 
             try
             {
-                var DbContext = Services.GetRequiredService<BlogPostDbContext>();
+                var DbContext = Services.GetRequiredService<DbContextIdentity>();
+
                 await DbContext.Database.MigrateAsync();
 
-                await BlogPostDataSeedingContext.AddAsync(DbContext);
+
+                var _UserManager = Services.GetRequiredService<UserManager<AppUser>>();
+
+                await DataSeedingContext.AddAsync(DbContext, _UserManager);
 
             }
             catch (Exception ex) {

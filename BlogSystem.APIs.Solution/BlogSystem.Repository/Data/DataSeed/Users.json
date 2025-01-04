@@ -1,31 +1,31 @@
 ﻿[
 	{
 		"UserName": "EslamAyman",
-		"HashPassword": "123",
+		"DisplayName": "EslamAyman",
 		"Email": "EslamAyman@gmail.com",
 		"Role": "Admin"
 	},
 	{
 		"UserName": "MohamedAli",
-		"HashPassword": "123",
+		"DisplayName": "MohamedAli",
 		"Email": "MohamedAli@gmail.com",
 		"Role": "Reader"
 	},
 	{
 		"UserName": "JooAyman",
-		"HashPassword": "123",
+		"DisplayName": "JooAyman",
 		"Email": "JooAyman@gmail.com",
 		"Role": "Editor"
 	},
 	{
 		"UserName": "MonaRamy",
-		"HashPassword": "123",
+		"DisplayName": "MonaRamy",
 		"Email": "MonaRamy@gmail.com",
 		"Role": "Reader"
 	},
 	{
 		"UserName": "HashemAhmed",
-		"HashPassword": "123",
+		"DisplayName": "HashemAhmed",
 		"Email": "HashemAhmed@gmail.com",
 		"Role": "Reader"
 	}

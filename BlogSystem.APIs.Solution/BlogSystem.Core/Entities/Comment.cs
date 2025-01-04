@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlogSystem.Core.Entities.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -18,8 +19,8 @@ namespace BlogSystem.Core.Entities
 
 
         //[ForeignKey("Author")]
-        public int AuthorId { get; set; }
-        public User Author { get; set; }
+        public string AuthorId { get; set; }
+        public AppUser Author { get; set; }
 
     }
 }

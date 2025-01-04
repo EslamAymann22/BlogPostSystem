@@ -1,4 +1,7 @@
 ﻿using BlogSystem.Core.Entities;
+using BlogSystem.Core.Entities.Identity;
+//using BlogSystem.Repository.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,23 +13,24 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Repository.Data
 {
-    public static class BlogPostDataSeedingContext
+    public static class DataSeedingContext
     {
 
-        public static async Task AddAsync(BlogPostDbContext MyDbContext)
+        public static async Task AddAsync(DbContextIdentity MyDbContext , UserManager<AppUser> _UserManager)
         {
 
-            if (!MyDbContext.users.Any())
+            if (!_UserManager.Users.Any())
             {
                 var UsersData = File.ReadAllText("../BlogSystem.Repository/Data/DataSeed/Users.json");
-                var Users = JsonSerializer.Deserialize<List<User>>(UsersData);
-                if (Users?.Count() > 0)
+                var users = JsonSerializer.Deserialize<List<AppUser>>(UsersData);
+                if (users?.Count() > 0)
                 {
-                    foreach (var User in Users)
+                    foreach (var User in users)
                     {
-                        await MyDbContext.Set<User>().AddAsync(User);
+                        //await _UserManager.CreateAsync(User, "123");
+                        await _UserManager.CreateAsync(User, "Pa$$w0rD");
                     }
-                    await MyDbContext.SaveChangesAsync();
+                    //await dbContextIdentity.SaveChangesAsync();
                 }
             }
 
@@ -81,6 +85,7 @@ namespace BlogSystem.Repository.Data
                         //}
 
                         Post.Tags = PostTags;
+                        //Post.Author = await _UserManager.Users.Where(x => x.Id == Post.AuthorId).FirstOrDefaultAsync();
                         await MyDbContext.Set<Post>().AddAsync(Post);
                     }
                     await MyDbContext.SaveChangesAsync();

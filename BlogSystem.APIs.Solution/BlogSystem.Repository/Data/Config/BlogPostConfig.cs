@@ -1,4 +1,5 @@
 ﻿using BlogSystem.Core.Entities;
+using BlogSystem.Core.Entities.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -17,7 +18,8 @@ namespace BlogSystem.Repository.Data.Config
             builder.HasOne(P => P.Author)
                 .WithMany()
                 .HasForeignKey(P => P.AuthorId)
-            .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade);
+
 
             builder.HasOne(P => P.Category)
                 .WithMany()

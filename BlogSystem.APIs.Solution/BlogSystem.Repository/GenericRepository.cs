@@ -14,9 +14,9 @@ namespace BlogSystem.Repository
 
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseClassWithId
     {
-        private readonly BlogPostDbContext _dbContext;
+        private readonly DbContextIdentity _dbContext;
 
-        public GenericRepository(BlogPostDbContext dbContext)
+        public GenericRepository(DbContextIdentity dbContext)
         {
             _dbContext = dbContext;
         }

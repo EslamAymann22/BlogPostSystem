@@ -1,6 +1,7 @@
 ﻿using BlogSystem.Core.Entities;
+using BlogSystem.Core.Entities.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace BlogSystem.Repository.Data
 {
-    public class BlogPostDbContext : DbContext
+    public class DbContextIdentity : IdentityDbContext<AppUser>
     {
-        public BlogPostDbContext(DbContextOptions<BlogPostDbContext> options) : base(options)
+        public DbContextIdentity(DbContextOptions<DbContextIdentity> options) : base(options)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,13 +25,10 @@ namespace BlogSystem.Repository.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<User> users { get; set; }
-        public DbSet<Comment>comments { get; set; }
-        public DbSet<Post>blogPosts { get; set; }
-        public DbSet<Tag>tags { get; set; }
-        public DbSet<Category> categories{ get; set; }
-        
-        
+        public DbSet<Comment> comments { get; set; }
+        public DbSet<Post> blogPosts { get; set; }
+        public DbSet<Tag> tags { get; set; }
+        public DbSet<Category> categories { get; set; }
 
     }
 }

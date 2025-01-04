@@ -2,7 +2,7 @@
   {
     "Title": "Post1",
     "Content": "ContentOfPost1WhyDon'tUseGetLine!!!!,",
-    "AuthorId": 2,
+    "AuthorId": "41c2f2fc-639c-43be-85d0-360a4b9f8abe",
     "Tags": [
       {
         "Id": 2
@@ -16,7 +16,7 @@
   {
     "Title": "Post2",
     "Content": "ContentOfPost2WhyDon'tUseGetLine!!!!,",
-    "AuthorId": 1,
+    "AuthorId": "4a69b190-5220-4a36-bed4-01ccb80277cd",
     "Tags": [
       {
         "Id": 1
@@ -30,7 +30,7 @@
   {
     "Title": "Post3",
     "Content": "ContentOfPost3WhyDon'tUseGetLine!!!!,",
-    "AuthorId": 5,
+    "AuthorId": "56db6c48-d811-406e-ba0e-817308d7f992",
     "Tags": [
       {
         "Id": 4
@@ -44,7 +44,7 @@
   {
     "Title": "Post4",
     "Content": "ContentOfPost4WhyDon'tUseGetLine!!!!,",
-    "AuthorId": 2,
+    "AuthorId": "91ee4fb8-1d19-4d25-b842-f6c3242c3ed5",
     "Tags": [
       {
         "Id": 1
@@ -58,7 +58,7 @@
   {
     "Title": "Post5",
     "Content": "ContentOfPost5WhyDon'tUseGetLine!!!!,",
-    "AuthorId": 3,
+    "AuthorId": "41c2f2fc-639c-43be-85d0-360a4b9f8abe",
     "Tags": [
       {
         "Id": 2

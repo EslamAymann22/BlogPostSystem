@@ -12,3 +12,4 @@ C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Core\obj\De
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Core\obj\Debug\net9.0\ref\BlogSystem.Core.dll
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Core\bin\Debug\net9.0\BlogSystem.Core.runtimeconfig.json
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Core\obj\Debug\net9.0\BlogSystem.Core.genruntimeconfig.cache
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Core\obj\Debug\net9.0\BlogSystem.Core.csproj.AssemblyReference.cache
