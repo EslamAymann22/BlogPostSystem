@@ -3,10 +3,14 @@ using BlogSystem.APIs.DTOs;
 using BlogSystem.APIs.Errors;
 using BlogSystem.APIs.Helper;
 using BlogSystem.Core.Entities;
+using BlogSystem.Core.Entities.Identity;
 using BlogSystem.Core.Repositories;
 using BlogSystem.Core.Specifications;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace BlogSystem.APIs.Controllers
 {
@@ -15,27 +19,46 @@ namespace BlogSystem.APIs.Controllers
     {
         private readonly IGenericRepository<Post> _blogPosts;
         private readonly IMapper _mapper;
+        private readonly UserManager<AppUser> _userManager;
 
-        public PostController(IGenericRepository<Post> blogPosts,IMapper mapper)
+        public PostController(IGenericRepository<Post> blogPosts,IMapper mapper
+                             ,UserManager<AppUser> userManager )
         {
             _blogPosts = blogPosts;
             _mapper = mapper;
+            this._userManager = userManager;
         }
 
+        [Authorize]
         [HttpGet]
         //public async Task<ActionResult<List<PostDtoToReturn>>> GetAllPostsAsync([FromQuery] PostSpecificationParams Parms )
         public async Task<ActionResult<Pagination<PostDtoToReturn>>> GetAllPostsAsync([FromQuery] PostSpecificationParams Parms )
         {
             //if(Parms.status == PostStatus.Published) { Parms.status = null; }
+
+            var _CutAccount = await _GetCurrentUser();
+            if (Parms.status is not null && _CutAccount.Role != UserRole.Admin && Parms.status != PostStatus.Published)
+                return NotFound(new ApiResponse(401, "Not Allowed For U To Use This Feature Search"));
+            if (Parms.status == null)
+                Parms.status = PostStatus.Published;
+
             var Spec = new PostSpecificationWithAllIncludes(Parms);
             var Result = await _blogPosts.GetAllSpecAsync(Spec);
             var ResultDto = _mapper.Map<IEnumerable<Post>, IEnumerable<PostDtoToReturn>>(Result);
-            //var Result = await _blogPosts.GetAllAsync();
-            //return Ok(ResultDto);
-            //return Ok(Result);
+            ///var Result = await _blogPosts.GetAllAsync();
+            ///return Ok(ResultDto);
+            ///return Ok(Result);
             return Ok(new Pagination<PostDtoToReturn>(Spec.take, Parms.index, Spec.countOfElements, ResultDto));
         }
 
+        private async  Task<AppUser> _GetCurrentUser()
+        {
+            var _Email = User.FindFirstValue(ClaimTypes.Email);
+            var _Account = await _userManager.FindByEmailAsync(_Email);
+           return _Account;
+        }
+
+        [Authorize]
         [HttpGet("{id}")]
         // BaseUrl/Api/post/id(int)
         public async Task<ActionResult<PostDtoToReturn>> GetPostByIdAsync(int id)
@@ -43,8 +66,8 @@ namespace BlogSystem.APIs.Controllers
             var Spec = new PostSpecificationWithAllIncludes(id);
             //var Result =await _blogPosts.GetByIdAsync(id);
             var Result =await _blogPosts.GetByIdSpecAsync(Spec);
+            if (Result == null) return BadRequest(new ApiResponse(404));
             var ResultDto = _mapper.Map<Post, PostDtoToReturn>(Result);
-            if (ResultDto == null) return NotFound(new ApiResponse(404));
             return Ok(ResultDto);
         }
 

@@ -10,3 +10,7 @@ C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\refint\BlogSystem.Service.dll
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.pdb
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\ref\BlogSystem.Service.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\bin\Debug\net9.0\BlogSystem.Core.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\bin\Debug\net9.0\BlogSystem.Core.pdb
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSystem.Service.csproj.AssemblyReference.cache
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.Service\obj\Debug\net9.0\BlogSyst.C9420BA2.Up2Date

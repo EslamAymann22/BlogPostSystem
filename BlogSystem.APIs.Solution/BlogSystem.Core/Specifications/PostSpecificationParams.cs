@@ -27,8 +27,7 @@ namespace BlogSystem.Core.Specifications
             set { _PageSize = Math.Min(Math.Max(1, value), 5); }
         }
         public int index { get; set; } = 1;
-
-
-
+        public string? Tag { get; set; }
+        public string? Category{ get; set; }
     }
 }

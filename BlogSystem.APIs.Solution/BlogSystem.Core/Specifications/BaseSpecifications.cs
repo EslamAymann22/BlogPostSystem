@@ -17,7 +17,7 @@ namespace BlogSystem.Core.Specifications
         public Expression<Func<T, object>> OrderByDesc { get; set; }
         public int take { get; set; }
         public int skip { get; set; }
-        public bool ApplyingPagination {  get; set; } = true;
+        public bool ApplyingPagination {  get; set; } = false;
         public int countOfElements {  get; set; }
 
         public BaseSpecifications() { }

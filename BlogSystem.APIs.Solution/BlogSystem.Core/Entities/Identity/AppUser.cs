@@ -14,7 +14,7 @@ namespace BlogSystem.Core.Entities.Identity
 
         [Required]
         public string DisplayName { get; set; }
-        UserRole Role { get; set; } = UserRole.Reader;
+        public UserRole Role { get; set; } = UserRole.Reader;
 
     }
 }

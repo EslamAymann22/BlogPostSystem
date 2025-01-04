@@ -27,16 +27,16 @@ namespace BlogSystem.APIs
 
             
 
-            //builder.Services.AddDbContext<BlogPostDbContext>(options =>
-            //{
-            //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            //});
+            ///builder.Services.AddDbContext<BlogPostDbContext>(options =>
+            ///{
+            ///    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            ///});
             builder.Services.AddDbContext<DbContextIdentity>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
 
-            builder.Services.AddIdentityServices();
+            builder.Services.AddIdentityServices(builder.Configuration);
 
 
             //ApplicationServicesExtensions.AddApplicationServices(builder.Services); // this is wrong 
@@ -93,6 +93,7 @@ namespace BlogSystem.APIs
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

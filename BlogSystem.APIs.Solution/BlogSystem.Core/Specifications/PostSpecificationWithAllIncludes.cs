@@ -27,6 +27,7 @@ namespace BlogSystem.Core.Specifications
         {
             skip = (Parms.index - 1) * Parms.pageSize;
             take = Parms.pageSize;
+            ApplyingPagination = true;
         }
 
         private void SearchFiltration(PostSpecificationParams Parms)
@@ -38,7 +39,10 @@ namespace BlogSystem.Core.Specifications
             || (P.Content.ToLower().Contains(Parms.Search.ToLower()))
             //||(P.Author.UserName.ToLower().Contains(Parms.Search.ToLower()))   // not required
             || (P.Tags.Any(T => T.Name.ToLower().Contains(Parms.Search.ToLower()))))
-            && (Parms.status == null || Parms.status == P.Status);
+            && (Parms.status == null || Parms.status == P.Status)
+            &&(string.IsNullOrEmpty(Parms.Tag) || P.Tags.Any(T=>T.Name==Parms.Tag))
+            &&(string.IsNullOrEmpty(Parms.Category) || P.Category.Name == Parms.Category)
+            ;
         }
         private void SortFiltration(PostSpecificationParams Parms)
         {

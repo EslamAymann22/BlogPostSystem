@@ -27,7 +27,7 @@ namespace BlogSystem.Core.Specifications
 
             spec.countOfElements = Query.Count();
 
-            if(spec.ApplyingPagination)
+            if(spec.ApplyingPagination )
                 Query = Query.Skip(spec.skip).Take(spec.take);
 
 

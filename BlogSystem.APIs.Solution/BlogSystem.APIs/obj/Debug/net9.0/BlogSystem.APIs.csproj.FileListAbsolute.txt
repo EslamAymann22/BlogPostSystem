@@ -169,3 +169,6 @@ C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\De
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\AutoMapper.dll
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\BlogSystem.Service.dll
+C:\Users\hhhh\Desktop\BlogSystem\BlogSystem.APIs.Solution\BlogSystem.APIs\bin\Debug\net9.0\BlogSystem.Service.pdb
