@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace BlogSystem.APIs.Controllers
@@ -21,14 +22,17 @@ namespace BlogSystem.APIs.Controllers
         private readonly IGenericRepository<Post> _blogPosts;
         private readonly IMapper _mapper;
         private readonly UserManager<AppUser> _userManager;
+        private readonly DbContextIdentity _dbContextIdentity;
 
         public PostController(IGenericRepository<Post> blogPosts
                              ,IMapper mapper
-                             ,UserManager<AppUser> userManager )
+                             ,UserManager<AppUser> userManager
+                             ,DbContextIdentity dbContextIdentity)
         {
             _blogPosts = blogPosts;
             _mapper = mapper;
             this._userManager = userManager;
+            this._dbContextIdentity = dbContextIdentity;
         }
 
         [Authorize]
@@ -80,33 +84,43 @@ namespace BlogSystem.APIs.Controllers
             return Ok(ResultDto);
         }
 
-        //[HttpPost]
-        //public async Task<ActionResult<PostDtoToReturn>> CreateNewPost(PostDtoToReturn model)
-        //{
-        //    var _Account = await _GetCurrentUser();
-        //    if(_Account.Role == UserRole.Reader) return NotFound(new ApiResponse(401,"You are don't allow to create new post"));
+        [HttpPost]
+        public async Task<ActionResult<Post>> CreateNewPost(PostDtoToReturn model)
+        {
+            var _Account = await _GetCurrentUser();
+            if (_Account.Role == UserRole.Reader) return NotFound(new ApiResponse(401, "You are don't allow to create new post"));
 
-        //    User.IsInRole("Admin");
+            try
+            {
+                Post _NewPost = new Post()
+                {
+                    Title = model.Title,
+                    Content = model.Content,
+                    CreatedAt = DateTime.Now,
+                    Status = PostStatus.Published
+                };
 
-        //    try
-        //    {
+                _NewPost.Tags = new List<Tag>();
+                foreach (var Tag in model.Tags)
+                {
+                    _NewPost.Tags.Add(await _dbContextIdentity.tags.Where(T => T.Name == Tag).FirstOrDefaultAsync());
+                }
+                _NewPost.Author =await _dbContextIdentity.Users.Where(U => U.DisplayName == model.Author).FirstOrDefaultAsync();
+                _NewPost.AuthorId = _NewPost.Author.Id;
+                _NewPost.Category =await _dbContextIdentity.categories.Where(U => U.Name == model.Category).FirstOrDefaultAsync();
+                _NewPost.CategoryId = _NewPost.Category.Id;
 
-        //        Post _NewPost = new Post()
-        //        {
-        //            Id = model.Id,
-        //            Title = model.Title,
-        //            Content = model.Content,
-        //            Author = _
-        //        }
+                 await _dbContextIdentity.blogPosts.AddAsync(_NewPost);
+                 await _dbContextIdentity.SaveChangesAsync();
+                return _NewPost;
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ApiResponse(500, ex.Message));
 
-        //    }
-        //    catch (Exception ex) {
-        //        return BadRequest(ex);
-        //        return BadRequest(new ApiResponse(500, ex.Message));
+            }
 
-        //    }
-
-        //}
+        }
 
         [Authorize]
         private async Task<AppUser> _GetCurrentUser()

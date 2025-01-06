@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "BlogSystem.APIs\\Controllers\\PostController.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Controllers\\PostController.cs",
               "RelativeToolTip": "BlogSystem.APIs\\Controllers\\PostController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAqwG4AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAqwHcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T00:01:34.166Z",
               "IsPinned": true,
@@ -56,8 +56,7 @@
               "RelativeToolTip": "BlogSystem.APIs\\Helper\\MappingProfiles.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T00:14:44.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T00:14:44.735Z"
             },
             {
               "$type": "Document",
@@ -81,8 +80,7 @@
               "RelativeToolTip": "BlogSystem.APIs\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T00:04:35.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T00:04:35.034Z"
             }
           ]
         }
