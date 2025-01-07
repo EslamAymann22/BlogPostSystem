@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,10 +39,17 @@ namespace BlogSystem.Repository
             return await PrepareSpecification(Spec).FirstOrDefaultAsync();
         }
 
+        public async Task AddAsync(T item) { 
+           await _dbContext.Set<T>().AddAsync(item);
+           await _dbContext.SaveChangesAsync();
+        }
+
         private IQueryable<T> PrepareSpecification(ISpecifications<T> Spe)
         {
             return SpecificationsEvaluator<T>.GetQuery(_dbContext.Set<T>(), Spe);
         }
+
+
 
         ///public async Task<IEnumerable<T>> GetAllAsync()
         ///{
