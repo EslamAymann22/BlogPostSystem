@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|solutionrelative:blogsystem.apis\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{78A9E553-7417-4BBE-A488-F1C319368609}|BlogSystem.Service\\BlogSystem.Service.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78A9E553-7417-4BBE-A488-F1C319368609}|BlogSystem.Service\\BlogSystem.Service.csproj|solutionrelative:blogsystem.service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.apis\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|solutionrelative:blogsystem.apis\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -36,10 +40,23 @@
               "RelativeDocumentMoniker": "BlogSystem.APIs\\Controllers\\PostController.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Controllers\\PostController.cs",
               "RelativeToolTip": "BlogSystem.APIs\\Controllers\\PostController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAqwHcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T00:01:34.166Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Service\\TokenService.cs",
+              "RelativeDocumentMoniker": "BlogSystem.Service\\TokenService.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Service\\TokenService.cs",
+              "RelativeToolTip": "BlogSystem.Service\\TokenService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T14:59:40.388Z",
               "EditorCaption": ""
             },
             {
@@ -48,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MappingProfiles.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Helper\\MappingProfiles.cs",
               "RelativeDocumentMoniker": "BlogSystem.APIs\\Helper\\MappingProfiles.cs",
@@ -60,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Post.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Entities\\Post.cs",
               "RelativeDocumentMoniker": "BlogSystem.Core\\Entities\\Post.cs",
@@ -72,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "BlogSystem.APIs\\Controllers\\AccountController.cs",

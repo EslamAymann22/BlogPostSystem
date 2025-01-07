@@ -41,12 +41,13 @@ namespace BlogSystem.APIs.Controllers
         {
             //if(Parms.status == PostStatus.Published) { Parms.status = null; }
 
-            var _CutAccount = await _GetCurrentUser();
+            //var _CutAccount = await _GetCurrentUser();
 
-            if (Parms.status is not null && _CutAccount.Role != UserRole.Admin && Parms.status != PostStatus.Published)
+            //if (Parms.status is not null && _CutAccount.Role != UserRole.Admin && Parms.status != PostStatus.Published)
+            if (Parms.status is not null && !User.IsInRole("Admin") && Parms.status != PostStatus.Published)
                 return NotFound(new ApiResponse(401, "Not Allowed For U To Use This Feature Search"));
 
-            if (Parms.status == null && _CutAccount.Role != UserRole.Admin)
+            if (Parms.status == null && !User.IsInRole("Admin"))
                 Parms.status = PostStatus.Published;
 
             var Spec = new PostSpecificationWithAllIncludes(Parms);
@@ -70,13 +71,14 @@ namespace BlogSystem.APIs.Controllers
         {
             var Spec = new PostSpecificationWithAllIncludes(id);
             //var Result =await _blogPosts.GetByIdAsync(id);
-            var Result =await _blogPosts.GetByIdSpecAsync(Spec);
+            var Result = await _blogPosts.GetByIdSpecAsync(Spec);
 
             if (Result == null) return BadRequest(new ApiResponse(404));
 
-            var _CutAccount = await _GetCurrentUser();
 
-            if (Result.Status!=PostStatus.Published && _CutAccount.Role!=UserRole.Admin)
+            //var _CutAccount = await _GetCurrentUser();
+            //if (Result.Status!=PostStatus.Published && _CutAccount.Role!=UserRole.Admin)
+            if (Result.Status!=PostStatus.Published && !User.IsInRole("Admin"))
                 return NotFound(new ApiResponse(401, "Not Allowed For U To Use This Feature Search"));
 
             var ResultDto = _mapper.Map<Post, PostDtoToReturn>(Result);
@@ -84,11 +86,13 @@ namespace BlogSystem.APIs.Controllers
             return Ok(ResultDto);
         }
 
+        [Authorize(Roles = "Admin,Editor")]
         [HttpPost]
         public async Task<ActionResult<Post>> CreateNewPost(PostDtoToReturn model)
         {
-            var _Account = await _GetCurrentUser();
-            if (_Account.Role == UserRole.Reader) return NotFound(new ApiResponse(401, "You are don't allow to create new post"));
+            //var _Account = await _GetCurrentUser();
+            //if (_Account.Role == UserRole.Reader)
+                //return NotFound(new ApiResponse(401, "You are don't allow to create new post"));
 
             try
             {
@@ -101,10 +105,17 @@ namespace BlogSystem.APIs.Controllers
                 };
 
                 _NewPost.Tags = new List<Tag>();
-                foreach (var Tag in model.Tags)
-                {
-                    _NewPost.Tags.Add(await _dbContextIdentity.tags.Where(T => T.Name == Tag).FirstOrDefaultAsync());
-                }
+
+                _NewPost.Tags =await _dbContextIdentity.tags
+                    .Where(T=>model.Tags.Contains(T.Name))
+                    .ToListAsync(); 
+
+                ///foreach (var Tag in model.Tags)
+                ///{
+                ///    _NewPost.Tags.Add(await _dbContextIdentity.tags.Where(T => T.Name == Tag).FirstOrDefaultAsync());
+                ///}
+
+
                 _NewPost.Author =await _dbContextIdentity.Users.Where(U => U.DisplayName == model.Author).FirstOrDefaultAsync();
                 _NewPost.AuthorId = _NewPost.Author.Id;
                 _NewPost.Category =await _dbContextIdentity.categories.Where(U => U.Name == model.Category).FirstOrDefaultAsync();

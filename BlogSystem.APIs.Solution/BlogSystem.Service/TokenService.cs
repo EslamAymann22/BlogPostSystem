@@ -29,7 +29,9 @@ namespace BlogSystem.Service
             var AuthClaims = new List<Claim>()
             {
                 new Claim (ClaimTypes.GivenName,User.DisplayName),
-                new Claim (ClaimTypes.Email,User.Email)
+                new Claim (ClaimTypes.Email,User.Email),
+                new Claim (ClaimTypes.Role,User.Role.ToString())
+
             };
 
             var UsersRole = await _userManager.GetRolesAsync(User);
