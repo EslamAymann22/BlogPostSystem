@@ -12,6 +12,7 @@ namespace BlogSystem.APIs.Helper
         public MappingProfiles()
         {
 
+
             
 
             CreateMap<Post, PostDtoToReturn>()
@@ -20,8 +21,11 @@ namespace BlogSystem.APIs.Helper
                 .ForMember(dest => dest.Tags, D => D.MapFrom(src => src.Tags.Select(tag => tag.Name).ToList()))
                 .ForMember(dest => dest.Category, D => D.MapFrom(src => src.Category.Name));
 
+            CreateMap<Comment, CommentDto>()
+                .ForMember(dest => dest.AuthorName, D => D.MapFrom(src => src.Post.Author.DisplayName));
+
             //CreateMap<PostDtoToReturn, Post>()
-                //.ForMember(dest => dest.Tags, D => D.MapFrom()
+            //.ForMember(dest => dest.Tags, D => D.MapFrom()
 
         }
 
