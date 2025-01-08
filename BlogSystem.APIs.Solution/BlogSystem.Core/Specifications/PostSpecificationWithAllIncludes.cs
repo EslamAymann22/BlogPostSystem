@@ -1,4 +1,5 @@
 ﻿using BlogSystem.Core.Entities;
+using BlogSystem.Core.Specifications.Params;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;

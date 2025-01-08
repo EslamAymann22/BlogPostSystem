@@ -49,7 +49,11 @@ namespace BlogSystem.Repository
             return SpecificationsEvaluator<T>.GetQuery(_dbContext.Set<T>(), Spe);
         }
 
-
+        public void Delete(T item)
+        {
+             _dbContext.Set<T>().Remove(item);
+            _dbContext.SaveChanges();
+        }
 
         ///public async Task<IEnumerable<T>> GetAllAsync()
         ///{

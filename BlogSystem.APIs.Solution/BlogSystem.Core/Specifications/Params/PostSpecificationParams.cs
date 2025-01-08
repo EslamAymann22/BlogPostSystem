@@ -6,11 +6,11 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogSystem.Core.Specifications
+namespace BlogSystem.Core.Specifications.Params
 {
-    public class PostSpecificationParams 
+    public class PostSpecificationParams
     {
-        public string? Sort {  get; set; }
+        public string? Sort { get; set; }
         private string? _Search;
         public string? Search
         {
@@ -18,7 +18,7 @@ namespace BlogSystem.Core.Specifications
             set { _Search = value?.ToLower(); }
         }
 
-        public PostStatus? status {  get; set; }
+        public PostStatus? status { get; set; }
 
         private int _PageSize = 5;
         public int pageSize
@@ -28,6 +28,6 @@ namespace BlogSystem.Core.Specifications
         }
         public int index { get; set; } = 1;
         public string? Tag { get; set; }
-        public string? Category{ get; set; }
+        public string? Category { get; set; }
     }
 }

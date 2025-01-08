@@ -6,6 +6,7 @@ using BlogSystem.Core.Entities;
 using BlogSystem.Core.Entities.Identity;
 using BlogSystem.Core.Repositories;
 using BlogSystem.Core.Specifications;
+using BlogSystem.Core.Specifications.Params;
 using BlogSystem.Repository.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -16,7 +17,7 @@ using System.Security.Claims;
 
 namespace BlogSystem.APIs.Controllers
 {
-    
+
     public class PostController : ApiBaseController
     {
         private readonly IGenericRepository<Post> _blogPosts;

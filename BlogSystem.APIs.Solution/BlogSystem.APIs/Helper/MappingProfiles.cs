@@ -22,7 +22,7 @@ namespace BlogSystem.APIs.Helper
                 .ForMember(dest => dest.Category, D => D.MapFrom(src => src.Category.Name));
 
             CreateMap<Comment, CommentDto>()
-                .ForMember(dest => dest.AuthorName, D => D.MapFrom(src => src.Post.Author.DisplayName));
+                .ForMember(dest => dest.AuthorName, D => D.MapFrom(src => src.Author.DisplayName));
 
             //CreateMap<PostDtoToReturn, Post>()
             //.ForMember(dest => dest.Tags, D => D.MapFrom()

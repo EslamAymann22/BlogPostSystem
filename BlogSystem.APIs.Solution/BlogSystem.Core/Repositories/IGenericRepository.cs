@@ -15,7 +15,7 @@ namespace BlogSystem.Core.Repositories
         Task<IEnumerable<T>> GetAllSpecAsync(ISpecifications<T> Spec);
         Task<T> GetByIdSpecAsync(ISpecifications<T>Spec);
         Task AddAsync(T item);
-        //void DeleteById(int id);
+        void Delete(T item);
         //void UpdateById(T entity);
 
     }
