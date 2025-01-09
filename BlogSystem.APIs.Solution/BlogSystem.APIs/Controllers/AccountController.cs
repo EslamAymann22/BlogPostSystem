@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -85,6 +86,22 @@ namespace BlogSystem.APIs.Controllers
             };
             return Ok(_ReturnedUser);
         }
+
+        [HttpDelete("{Id}")]
+        [Authorize(Roles = ("Admin"))]
+        public async Task<ActionResult<UserDto>> DeleteUser(string Id)
+        {
+
+            var _User = await _userManager.Users.Where(U => U.Id == Id).FirstOrDefaultAsync();
+            if (_User is null)
+                return NotFound(new ApiResponse(404, "This user id not found!!"));
+            //var User =await _dbContextIdentity.Users.Where(U=>U.Id==Id).FirstOrDefaultAsync();
+            var Result = await _userManager.DeleteAsync(_User);
+            if (!Result.Succeeded)
+                return BadRequest(Result);  /// i don't know what will return for me but it's not Error ^^
+            return Ok(new UserDto() { DisplayName = _User.DisplayName, Email = _User.Email });
+        }
+
 
     }
 }

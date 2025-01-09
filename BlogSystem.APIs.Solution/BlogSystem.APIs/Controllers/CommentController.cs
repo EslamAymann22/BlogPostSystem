@@ -69,12 +69,16 @@ namespace BlogSystem.APIs.Controllers
             if(_Comment is null)
                 return NotFound(new ApiResponse(404, "This comment is not found"));
 
+            var _Post = await _postRepo.GetByIdAsync(_Comment.PostId);
+            if (_Post.Status != PostStatus.Published && !User.IsInRole("Admin"))
+                return Unauthorized(new ApiResponse(401, "U Can't show this comment!!"));
+
             var _ReturnedComment = new CommentDto()
             {
                 AuthorName = _Comment.Author.DisplayName,
                 Content = _Comment.Content,
                 CreatedAt = _Comment.CreatedAt,
-                PostId = id
+                PostId = _Comment.PostId
             };
             return Ok(_ReturnedComment);
         }
@@ -84,7 +88,7 @@ namespace BlogSystem.APIs.Controllers
         public async Task<ActionResult<Pagination<CommentDto>>> GetCommentByPostId(int id, [FromQuery] CommentSpecificationParams Params)
         {
             var _Post = await _postRepo.GetByIdAsync(id);
-            if (_Post.Status != PostStatus.Published)
+            if (_Post.Status != PostStatus.Published && !User.IsInRole("Admin"))
                 return BadRequest(new ApiResponse(404, "This post is not found"));
 
             var Spe = new CommentSpecificationWithAuthInclude(Params, id);

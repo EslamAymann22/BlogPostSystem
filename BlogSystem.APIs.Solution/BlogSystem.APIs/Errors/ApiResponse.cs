@@ -19,6 +19,7 @@ namespace BlogSystem.APIs.Errors
             {
                 400 => "Bad Request",
                 401 => "You are not authorized",
+                403 => "You Don't have permission to this action",
                 404 => "Resource Not Found",
                 500 => "Internal Server Error",
                 _ => null

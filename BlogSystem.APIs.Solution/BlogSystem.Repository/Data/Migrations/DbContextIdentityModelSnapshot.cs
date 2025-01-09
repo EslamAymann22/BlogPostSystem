@@ -36,7 +36,7 @@ namespace BlogSystem.Repository.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("categories");
+                    b.ToTable("categories", (string)null);
                 });
 
             modelBuilder.Entity("BlogSystem.Core.Entities.Comment", b =>
@@ -67,7 +67,7 @@ namespace BlogSystem.Repository.Data.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("comments");
+                    b.ToTable("comments", (string)null);
                 });
 
             modelBuilder.Entity("BlogSystem.Core.Entities.Identity.AppUser", b =>
@@ -180,7 +180,7 @@ namespace BlogSystem.Repository.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("blogPosts");
+                    b.ToTable("blogPosts", (string)null);
                 });
 
             modelBuilder.Entity("BlogSystem.Core.Entities.Tag", b =>
@@ -197,7 +197,7 @@ namespace BlogSystem.Repository.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tags");
+                    b.ToTable("tags", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -345,7 +345,7 @@ namespace BlogSystem.Repository.Data.Migrations
 
                     b.HasIndex("TagsId");
 
-                    b.ToTable("PostTag");
+                    b.ToTable("PostTag", (string)null);
                 });
 
             modelBuilder.Entity("BlogSystem.Core.Entities.Comment", b =>

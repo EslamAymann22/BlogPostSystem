@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "BlogSystem.APIs.Controllers.AccountController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Account/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BlogSystem.APIs.DTOs.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlogSystem.APIs.Controllers.AccountController",
     "Method": "GetCurUser",
     "RelativePath": "api/Account/GetCurrentUser",
     "HttpMethod": "GET",
@@ -277,6 +303,32 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BlogSystem.APIs.DTOs.PostDtoToReturn",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlogSystem.APIs.Controllers.PostController",
+    "Method": "DeletePost",
+    "RelativePath": "api/Post/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
         "Type": "System.Int32",
         "IsRequired": true
       }

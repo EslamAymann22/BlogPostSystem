@@ -109,7 +109,7 @@ namespace BlogSystem.APIs.Controllers
 
                 _NewPost.Tags =await _dbContextIdentity.tags
                     .Where(T=>model.Tags.Contains(T.Name))
-                    .ToListAsync(); 
+                    .ToListAsync();
 
                 ///foreach (var Tag in model.Tags)
                 ///{
@@ -117,13 +117,12 @@ namespace BlogSystem.APIs.Controllers
                 ///}
 
 
-                _NewPost.Author =await _dbContextIdentity.Users.Where(U => U.DisplayName == model.Author).FirstOrDefaultAsync();
-                _NewPost.AuthorId = _NewPost.Author.Id;
-                _NewPost.Category =await _dbContextIdentity.categories.Where(U => U.Name == model.Category).FirstOrDefaultAsync();
+                _NewPost.AuthorId   = model.AuthorId;
+                _NewPost.Author     = await _dbContextIdentity.Users.Where(U => U.Id == model.AuthorId).FirstOrDefaultAsync();
+                _NewPost.Category   = await _dbContextIdentity.categories.Where(U => U.Name == model.Category).FirstOrDefaultAsync();
                 _NewPost.CategoryId = _NewPost.Category.Id;
 
-                 await _dbContextIdentity.blogPosts.AddAsync(_NewPost);
-                 await _dbContextIdentity.SaveChangesAsync();
+                await _blogPosts.AddAsync(_NewPost);
                 return _NewPost;
             }
             catch (Exception ex)
@@ -133,6 +132,29 @@ namespace BlogSystem.APIs.Controllers
             }
 
         }
+
+        [HttpDelete("{Id}")]
+        [Authorize(Roles =("Admin"))]
+        public async Task<ActionResult<PostDtoToReturn>> DeletePost(int Id)
+        {
+
+            var _Post =await _dbContextIdentity.blogPosts.Where(U => U.Id == Id).FirstOrDefaultAsync();
+            if (_Post is null)
+                return NotFound(new ApiResponse(404, "This Post id not found!!"));
+            //var User =await _dbContextIdentity.Users.Where(U=>U.Id==Id).FirstOrDefaultAsync();
+
+            try
+            {
+                _blogPosts.Delete(_Post);
+            }
+            catch (Exception ex) {
+                return BadRequest(new ApiResponse(500, ex.Message));
+            }
+
+
+            return Ok(_mapper.Map<Post,PostDtoToReturn>(_Post));
+        }
+
 
         [Authorize]
         private async Task<AppUser> _GetCurrentUser()
