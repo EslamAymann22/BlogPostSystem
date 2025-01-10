@@ -295,6 +295,32 @@
   },
   {
     "ContainingType": "BlogSystem.APIs.Controllers.PostController",
+    "Method": "UpdatePostData",
+    "RelativePath": "api/Post",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "BlogSystem.APIs.DTOs.PostDtoUpdateModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BlogSystem.Core.Entities.Post",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlogSystem.APIs.Controllers.PostController",
     "Method": "GetPostByIdAsync",
     "RelativePath": "api/Post/{id}",
     "HttpMethod": "GET",

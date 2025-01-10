@@ -145,7 +145,7 @@ namespace BlogSystem.APIs.Controllers
 
             try
             {
-                _blogPosts.Delete(_Post);
+              await  _blogPosts.DeleteAsync(_Post);
             }
             catch (Exception ex) {
                 return BadRequest(new ApiResponse(500, ex.Message));
@@ -165,6 +165,68 @@ namespace BlogSystem.APIs.Controllers
             return _Account;
         }
 
+        private async Task<Post> _GetPostById(int id) {
+            var Spec = new PostSpecificationWithAllIncludes(id);
+            //var Result =await _blogPosts.GetByIdAsync(id);
+            return await _blogPosts.GetByIdSpecAsync(Spec);
 
+           
+        }
+
+        [HttpPut]
+        [Authorize(Roles = "Admin,Editor")]
+        public async Task<ActionResult<Post>> UpdatePostData(PostDtoUpdateModel model)
+        {
+            
+            var _Post = await _GetPostById(model.Id);
+
+
+            if (_Post is null)
+                return BadRequest(new ApiResponse(404, "this post not founded"));
+            var _UserEmail = User.FindFirstValue(ClaimTypes.Email);
+            if(!User.IsInRole("Admin") && _Post.Author.Email != _UserEmail)
+                return BadRequest(new ApiResponse(401, "Not Allowed For U To Edit This Feature Post"));
+
+            _Post.UpdatedAt = model.UpdatedAt;
+
+            if(!string.IsNullOrEmpty(model.Title))
+                _Post.Title = model.Title;
+
+            if (!string.IsNullOrEmpty(model.Content))
+                _Post.Content = model.Content;
+
+            if (!string.IsNullOrEmpty(model.AuthorId))
+                _Post.AuthorId = model.AuthorId;
+
+            if(model.Status is not null && Enum.IsDefined(typeof(PostStatus),model.Status))
+                _Post.Status = model.Status.Value;
+
+            if (model.Tags is not null )
+            {
+                List<Tag> NewTags = new List<Tag>();
+
+                foreach (var tag in model.Tags)
+                {
+                    var NewTag = await _dbContextIdentity.tags.Where(T => T.Name == tag).FirstOrDefaultAsync();
+                    if (NewTag is not null)
+                        NewTags.Add(NewTag);
+                }
+                if (NewTags.Any()) 
+                    _Post.Tags=NewTags;
+            }
+
+            if(model.CategoryId is not null)
+            {
+                var _NewCategory = _dbContextIdentity.categories.Where(C => C.Id == model.CategoryId).FirstOrDefault();
+                if( _NewCategory is not null ) model.CategoryId = _NewCategory.Id;
+            }
+
+                
+            await _blogPosts.UpdateAsync(_Post);
+
+            return Ok(_Post);
+
+
+        }
     }
 } 

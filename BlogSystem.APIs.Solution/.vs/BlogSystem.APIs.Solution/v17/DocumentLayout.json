@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.apis\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|solutionrelative:blogsystem.apis\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.apis\\dtos\\postdtoupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF43DEBA-03BC-4266-A356-EE356AD4EF66}|BlogSystem.APIs\\BlogSystem.APIs.csproj|solutionrelative:blogsystem.apis\\dtos\\postdtoupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA07F90B-58CA-4BC8-9934-9C8DF5396CC5}|BlogSystem.Core\\BlogSystem.Core.csproj|c:\\users\\hhhh\\desktop\\blogsystem\\blogsystem.apis.solution\\blogsystem.core\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA07F90B-58CA-4BC8-9934-9C8DF5396CC5}|BlogSystem.Core\\BlogSystem.Core.csproj|solutionrelative:blogsystem.core\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,9 +42,36 @@
               "RelativeDocumentMoniker": "BlogSystem.APIs\\Controllers\\PostController.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\Controllers\\PostController.cs",
               "RelativeToolTip": "BlogSystem.APIs\\Controllers\\PostController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAAALsAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T04:49:12.531Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostDtoUpdateModel.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\DTOs\\PostDtoUpdateModel.cs",
+              "RelativeDocumentMoniker": "BlogSystem.APIs\\DTOs\\PostDtoUpdateModel.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.APIs\\DTOs\\PostDtoUpdateModel.cs",
+              "RelativeToolTip": "BlogSystem.APIs\\DTOs\\PostDtoUpdateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:02:41.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Entities\\Post.cs",
+              "RelativeDocumentMoniker": "BlogSystem.Core\\Entities\\Post.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\BlogSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\Entities\\Post.cs",
+              "RelativeToolTip": "BlogSystem.Core\\Entities\\Post.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T09:02:16.891Z",
               "EditorCaption": ""
             }
           ]

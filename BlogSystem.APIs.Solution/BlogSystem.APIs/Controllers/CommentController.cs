@@ -100,7 +100,7 @@ namespace BlogSystem.APIs.Controllers
 
         [HttpDelete("{id}")]
         [Authorize]
-        public ActionResult<Tuple<CommentDto,string>> DeleteComment(int id)
+        public async Task<ActionResult<Tuple<CommentDto,string>>> DeleteComment(int id)
         {
             // Get the comment
             var _Comment = _GetCommentByIdAsync(id);
@@ -112,8 +112,8 @@ namespace BlogSystem.APIs.Controllers
             if (!User.IsInRole("Admin") && _Comment.Result.Author.Email != _UserEmail)
                 return Unauthorized(new ApiResponse(401, "You not have permutation to delete this comment"));
 
-            // Delete comment
-            _CommentRepo.Delete(_Comment.Result);
+            // DeleteAsync comment
+            await _CommentRepo.DeleteAsync(_Comment.Result);
             var _DeletedComment = _mapper.Map<Comment,CommentDto>(_Comment.Result);
 
             // Create a cool message for user 
