@@ -348,3 +348,6 @@ C:\Users\hhhh\Desktop\BlogPostSystem\BlogSystem.APIs\obj\Debug\net9.0\staticweba
 C:\Users\hhhh\Desktop\BlogPostSystem\BlogSystem.APIs\obj\Debug\net9.0\BlogSyst.9A95F0C9.Up2Date
 C:\Users\hhhh\Desktop\BlogPostSystem\BlogSystem.APIs\obj\Debug\net9.0\BlogSystem.APIs.genruntimeconfig.cache
 C:\Users\hhhh\Desktop\BlogPostSystem\BlogSystem.APIs\obj\Debug\net9.0\ref\BlogSystem.APIs.dll
+C:\Users\hhhh\Desktop\BlogPostSystem\BlogSystem.APIs\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hhhh\Desktop\BlogPostSystem\BlogSystem.APIs\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\hhhh\Desktop\BlogPostSystem\BlogSystem.APIs\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

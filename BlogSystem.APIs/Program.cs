@@ -5,6 +5,7 @@ using BlogSystem.Service;
 using GalaxyApp.Core.MiddleWare;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 namespace BlogSystem.APIs
 {
@@ -19,6 +20,9 @@ namespace BlogSystem.APIs
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            builder.Services.AddSwaggerGen(c =>
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Blog Post Api", Version = "V1" })
+            );
 
 
             builder.Services.AddDbContext<BlogPostDbContext>(options =>
@@ -71,6 +75,8 @@ namespace BlogSystem.APIs
             //if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             // Zero is a index not value 
