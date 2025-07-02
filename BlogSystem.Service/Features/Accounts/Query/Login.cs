@@ -1,6 +1,6 @@
 ﻿using BlogSystem.Core.Entities.Identity;
+using BlogSystem.Core.ResponseBase.GeneralResponse;
 using BlogSystem.Core.Services;
-using BlogSystem.Service.ResponseBase.GeneralResponse;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using System.Net;

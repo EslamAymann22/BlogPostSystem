@@ -1,8 +1,8 @@
 using BlogSystem.APIs.Extensions;
-using BlogSystem.APIs.Middlewares;
 using BlogSystem.Core.Entities.Identity;
 using BlogSystem.Repository.Data;
 using BlogSystem.Service;
+using GalaxyApp.Core.MiddleWare;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -70,13 +70,15 @@ namespace BlogSystem.APIs
             // Configure the HTTP request pipeline.
             //if (app.Environment.IsDevelopment())
             {
-                app.UseMiddleware<ExceptionMiddleWare>();
                 app.MapOpenApi();
             }
 
             // Zero is a index not value 
             //app.UseStatusCodePagesWithRedirects("/errors/{0}");
-            app.UseStatusCodePagesWithReExecute("/errors/{0}"); // Faster than Redirects
+            //app.UseStatusCodePagesWithReExecute("/errors/{0}"); // Faster than Redirects
+
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+
 
             app.UseHttpsRedirection();
 

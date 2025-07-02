@@ -1,5 +1,5 @@
-﻿using BlogSystem.Repository.Data;
-using BlogSystem.Service.ResponseBase.Paginations;
+﻿using BlogSystem.Core.ResponseBase.Paginations;
+using BlogSystem.Repository.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

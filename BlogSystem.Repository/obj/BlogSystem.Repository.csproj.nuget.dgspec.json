@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\BlogSystem.Repository.csproj": {}
+    "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Repository\\BlogSystem.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\BlogSystem.Core.csproj": {
+    "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Core\\BlogSystem.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\BlogSystem.Core.csproj",
+        "projectUniqueName": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Core\\BlogSystem.Core.csproj",
         "projectName": "BlogSystem.Core",
-        "projectPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\BlogSystem.Core.csproj",
+        "projectPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Core\\BlogSystem.Core.csproj",
         "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\obj\\",
+        "outputPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -81,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\BlogSystem.Repository.csproj": {
+    "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Repository\\BlogSystem.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\BlogSystem.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Repository\\BlogSystem.Repository.csproj",
         "projectName": "BlogSystem.Repository",
-        "projectPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\BlogSystem.Repository.csproj",
+        "projectPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Repository\\BlogSystem.Repository.csproj",
         "packagesPath": "C:\\Users\\hhhh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Repository\\obj\\",
+        "outputPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,8 +113,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\BlogSystem.Core.csproj": {
-                "projectPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.APIs.Solution\\BlogSystem.Core\\BlogSystem.Core.csproj"
+              "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Core\\BlogSystem.Core.csproj": {
+                "projectPath": "C:\\Users\\hhhh\\Desktop\\BlogPostSystem\\BlogSystem.Core\\BlogSystem.Core.csproj"
               }
             }
           }

@@ -1,7 +1,7 @@
 ﻿using BlogSystem.APIs.Helper;
+using BlogSystem.Core.ResponseBase.GeneralResponse;
 using BlogSystem.Service.Features.Comments.Command;
 using BlogSystem.Service.Features.Comments.Query;
-using BlogSystem.Service.ResponseBase.GeneralResponse;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +27,7 @@ namespace BlogSystem.APIs.Controllers
         }
 
         [HttpGet("Comment/{id}")]
-        public async Task<ActionResult<GetCommentDto>> GetCommentById(int id)
+        public async Task<ActionResult<BaseResponse<GetCommentDto>>> GetCommentById(int id)
         {
 
             var Model = new GetCommentByIdModel() { CommentId = id };

@@ -1,6 +1,6 @@
 ﻿using BlogSystem.Core.Entities;
+using BlogSystem.Core.ResponseBase.GeneralResponse;
 using BlogSystem.Repository.Data;
-using BlogSystem.Service.ResponseBase.GeneralResponse;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
@@ -37,7 +37,5 @@ namespace BlogSystem.Service.Features.Comments.Command
             await _blogPostDb.SaveChangesAsync(cancellationToken);
             return Success("Comment deleted successfully");
         }
-    }
-    {
     }
 }

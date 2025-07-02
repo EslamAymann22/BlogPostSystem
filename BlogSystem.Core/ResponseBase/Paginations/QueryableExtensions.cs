@@ -1,6 +1,6 @@
 ﻿using static System.Math;
 
-namespace BlogSystem.Service.ResponseBase.Paginations
+namespace BlogSystem.Core.ResponseBase.Paginations
 {
     public static class QueryableExtensions
     {

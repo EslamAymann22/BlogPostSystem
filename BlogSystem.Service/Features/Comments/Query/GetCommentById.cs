@@ -1,5 +1,5 @@
-﻿using BlogSystem.Repository.Data;
-using BlogSystem.Service.ResponseBase.GeneralResponse;
+﻿using BlogSystem.Core.ResponseBase.GeneralResponse;
+using BlogSystem.Repository.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Net;

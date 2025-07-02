@@ -1,4 +1,4 @@
-﻿namespace BlogSystem.Service.ResponseBase.Paginations
+﻿namespace BlogSystem.Core.ResponseBase.Paginations
 {
     public class PaginationParams
     {

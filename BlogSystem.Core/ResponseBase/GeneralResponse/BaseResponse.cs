@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace BlogSystem.Service.ResponseBase.GeneralResponse
+namespace BlogSystem.Core.ResponseBase.GeneralResponse
 {
     public class BaseResponse<T>
     {

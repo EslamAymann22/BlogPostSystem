@@ -1,5 +1,4 @@
-﻿using BlogSystem.APIs.DTOs;
-using BlogSystem.Service.Features.Accounts.Command;
+﻿using BlogSystem.Service.Features.Accounts.Command;
 using BlogSystem.Service.Features.Accounts.Query;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -18,21 +17,21 @@ namespace BlogSystem.APIs.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<UserDto>> Login(LoginModel Model)
+        public async Task<ActionResult<AccountDto>> Login(LoginModel Model)
         {
             return Ok(await _mediator.Send(Model));
         }
 
 
         [HttpPost("Register")]
-        public async Task<ActionResult<UserDto>> Register(RegisterModel Model)
+        public async Task<ActionResult<AccountDto>> Register(RegisterModel Model)
         {
             return Ok(await _mediator.Send(Model));
         }
 
         [Authorize]
         [HttpGet("GetCurrentUser")]
-        public async Task<ActionResult<UserDto>> GetCurUser()
+        public async Task<ActionResult<AccountDto>> GetCurUser()
         {
             var UserEmail = User.FindFirstValue(ClaimTypes.Email);
             var Model = new GetCurUserModel { Email = UserEmail };

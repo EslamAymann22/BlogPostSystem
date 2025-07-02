@@ -1,8 +1,8 @@
 ﻿using BlogSystem.Core.Entities;
 using BlogSystem.Core.Entities.Identity;
+using BlogSystem.Core.ResponseBase.GeneralResponse;
 using BlogSystem.Core.Services;
 using BlogSystem.Service.Features.Accounts.Query;
-using BlogSystem.Service.ResponseBase.GeneralResponse;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
@@ -46,17 +46,15 @@ namespace BlogSystem.Service.Features.Accounts.Command
             user.DisplayName = request.DisplayName;
             user.Role = UserRole.Reader;
 
-            var result = await _userManager.CreateAsync(user, request.Password);
-            if (result.Succeeded)
-                return Success(new AccountDto
-                {
-                    DisplayName = user.DisplayName,
-                    Token = await _tokenService.CreateTokenAsync(user, _userManager),
-                    UserId = user.Id,
-                    Email = user.Email,
-                    Role = user.Role.ToString()
-                });
-
+            await _userManager.CreateAsync(user, request.Password);
+            return Success(new AccountDto
+            {
+                DisplayName = user.DisplayName,
+                Token = await _tokenService.CreateTokenAsync(user, _userManager),
+                UserId = user.Id,
+                Email = user.Email,
+                Role = user.Role.ToString()
+            });
         }
     }
 }
