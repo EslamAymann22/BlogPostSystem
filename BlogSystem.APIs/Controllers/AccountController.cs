@@ -9,9 +9,9 @@ namespace BlogSystem.APIs.Controllers
 {
     public class AccountController : ApiBaseController
     {
-        private readonly Mediator _mediator;
+        private readonly IMediator _mediator;
 
-        public AccountController(Mediator mediator)
+        public AccountController(IMediator mediator)
         {
             this._mediator = mediator;
         }

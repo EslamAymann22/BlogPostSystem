@@ -47,6 +47,8 @@ namespace BlogSystem.Service.Features.Accounts.Command
             user.Role = UserRole.Reader;
 
             await _userManager.CreateAsync(user, request.Password);
+            await _userManager.AddToRoleAsync(user, UserRole.Reader.ToString());
+
             return Success(new AccountDto
             {
                 DisplayName = user.DisplayName,

@@ -54,8 +54,9 @@ namespace BlogSystem.APIs
 
 
                 var _UserManager = Services.GetRequiredService<UserManager<AppUser>>();
+                var _roleManager = Services.GetRequiredService<RoleManager<IdentityRole>>();
 
-                await DataSeedingContext.AddAsync(DbContext, _UserManager);
+                await DataSeedingContext.AddAsync(DbContext, _UserManager, _roleManager);
 
             }
             catch (Exception ex)

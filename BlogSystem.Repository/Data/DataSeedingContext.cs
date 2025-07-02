@@ -3,20 +3,14 @@ using BlogSystem.Core.Entities.Identity;
 //using BlogSystem.Repository.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace BlogSystem.Repository.Data
 {
     public static class DataSeedingContext
     {
 
-        public static async Task AddAsync(BlogPostDbContext MyDbContext , UserManager<AppUser> _UserManager)
+        public static async Task AddAsync(BlogPostDbContext MyDbContext, UserManager<AppUser> _UserManager, RoleManager<IdentityRole> _roleManager)
         {
 
             if (!_UserManager.Users.Any())
@@ -33,7 +27,20 @@ namespace BlogSystem.Repository.Data
                     //await dbContextIdentity.SaveChangesAsync();
                 }
             }
-
+            if (!_roleManager.Roles.Any())
+            {
+                var RoleList = new List<string>()
+                {
+                    UserRole.Admin.ToString(),
+                    UserRole.Reader.ToString(),
+                    UserRole.Editor.ToString(),
+                    UserRole.Blocked.ToString(),
+                };
+                foreach (var Role in RoleList)
+                {
+                    await _roleManager.CreateAsync(new IdentityRole(Role));
+                }
+            }
             if (!MyDbContext.tags.Any())
             {
                 var TagsData = File.ReadAllText("../BlogSystem.Repository/Data/DataSeed/Tags.json");

@@ -17,10 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Categories\Command\" />
-    <Folder Include="Features\Categories\Query\" />
-    <Folder Include="Features\Tags\Command\" />
-    <Folder Include="Features\Tags\Query\" />
+    <Folder Include="Features\Role\Query\" />
   </ItemGroup>
 
 </Project>
